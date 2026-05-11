@@ -479,16 +479,22 @@ def main():
             row["wordr_self_refine"].get("refined_label")
         )        
         # initial_conf를 direct에서 받아 override (더 정확한 값)
+        # initial_conf를 direct에서 받아 override
         row["wordr_self_refine"]["initial_conf"] = initial_conf
-        row["wordcand_self_refine"]["initial_label"] = normalize_label(
-            row["wordcand_self_refine"].get("initial_label")
+
+        # initial_label 정규화
+        row["wordr_self_refine"]["initial_label"] = normalize_label(
+            row["wordr_self_refine"].get("initial_label")
         )
-        row["wordcand_self_refine"]["refined_label"] = normalize_label(
-            row["wordcand_self_refine"].get("refined_label")
+
+        # refined_label 정규화
+        row["wordr_self_refine"]["refined_label"] = normalize_label(
+            row["wordr_self_refine"].get("refined_label")
         )
+
         print(
             f"  [WordR]          {row['wordr_self_refine']['refined_label']} "
-            f"| verified={row['wordr_self_refine']['verified_spans']}",
+            f"| verified={row['wordr_self_refine'].get('verified_spans', [])}",
             flush=True,
         )
 
