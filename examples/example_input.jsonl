@@ -1,0 +1,3 @@
+{"id":"example_support","claim":"Aspirin can reduce the risk of heart attack in some patients.","evidence":"Aspirin can reduce platelet aggregation, which may lower the risk of heart attack in some patients.","label":"SUPPORT"}
+{"id":"example_refute","claim":"The treatment increased systolic blood pressure.","evidence":"The treatment decreased systolic blood pressure during the trial.","label":"REFUTE"}
+{"id":"example_nei","claim":"Protein X directly causes liver cancer.","evidence":"Protein X was observed at higher levels in patients with liver cancer, but the study did not establish causality.","label":"NOT ENOUGH INFO"}
